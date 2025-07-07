@@ -3,6 +3,13 @@ app.post('/salvar', async (req, res) => {
   try {
     const { nome_INPUT1, nome_INPUT2, nome_INPUT3 } = req.body;
 
+    // AQUI VERIFICA SE JÁ EXISTE UM USUÁRIO ADMINISTRADOR COM O MESMO NOME
+    //CONSIDERAMOS QUE nome_INPUT1 SEJA O INPUT COM O NOME DE nome
+    const existente = await Administrador.findOne({ nome_INPUT1 });
+    if (existente) {
+      return res.status(409).json({ message: 'Este nome de administrador já está em uso.' });
+    }
+
     
     const customId = await gerarCustomId(); // -> AQUI ELE GERA UM IP FIXO PARA CADA REGISTRO
 
