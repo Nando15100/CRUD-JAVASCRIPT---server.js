@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // npm install bcrypt
 const bcrypt = require('bcrypt');
 const NOME_DA_COLECAO_PRIMEIRA_LETRA_MAIUSCULA = require('./models/NOME_DA_COLECAO_PRIMEIRA_LETRA_MAIUSCULA');
-const app = express();
+const app = express(); 
 
 app.use(express.json());
 app.use(express.static('public'));
