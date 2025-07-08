@@ -1,7 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-//NO TERMINAL DIGITAR
-// npm install bcrypt
 const bcrypt = require('bcrypt');
 const NOME_DA_COLECAO_PRIMEIRA_LETRA_MAIUSCULA = require('./models/NOME_DA_COLECAO_PRIMEIRA_LETRA_MAIUSCULA');
 const app = express(); 
