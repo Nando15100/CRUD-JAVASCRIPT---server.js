@@ -5,9 +5,9 @@ app.post('/salvar', async (req, res) => {
 
     // AQUI VERIFICA SE JÁ EXISTE UM USUÁRIO ADMINISTRADOR COM O MESMO NOME
     //CONSIDERAMOS QUE nome_INPUT1 SEJA O INPUT COM O NOME DE nome
-    const existente = await Administrador.findOne({ nome_INPUT1 });
+    const existente = await NOME_DA_COLECAO_PRIMEIRA_LETRA_EM_MAIUSCULA.findOne({ nome_INPUT1 });
     if (existente) {
-      return res.status(409).json({ message: 'Este nome de administrador já está em uso.' });
+      return res.status(409).json({ message: 'Este nome de usuário já está em uso.' });
     }
 
     
