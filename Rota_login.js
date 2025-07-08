@@ -1,5 +1,5 @@
 // ROTA DE LOGIN DO TIPO DO USUÁRIO
-app.post('/tipo_usuario_Login', async (req, res) => {
+app.post('/login_Tipo_Usuario', async (req, res) => {
   const { usuario, senha } = req.body;
 
   try {
